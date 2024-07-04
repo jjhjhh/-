@@ -1,0 +1,194 @@
+*{margin:0;padding:0;border-collapse: collapse;box-sizing: border-box;}
+/*body{max-width:1600px;margin:0 auto;}*/
+a{text-decoration: none !important;color:#1c1c1c;}
+button{background:white;transition: all .25s}
+button:hover{cursor:pointer;}
+ul{list-style: none}
+
+.wrap{max-width:1400px;margin: 0 auto;}
+.wrap2{max-width:1200px;margin: 0 auto;}
+.wrap3{max-width:1000px;margin: 0 auto;}
+.full-width{width:100%}
+.full-page{min-height:40vh;}
+
+.line{display: flex;justify-content: space-between;}
+.flex{display: flex;flex-wrap: wrap;}
+
+/*A모듈*/
+header{height:90px;border-bottom:2px solid silver;}
+header img{height:50px;}
+header>div{display: flex}
+header ul{display: flex;}
+header button{border:none;color:darkblue;font-size:13px;margin-left:20px;}
+nav ul{display: flex;justify-content: space-between}
+nav li{padding:0 10px 0 10px}
+nav li:hover{border-bottom:2px solid darkblue;}
+nav li:hover a{color: darkblue;}
+nav a{font-weight: bold;line-height: 38px;}
+
+#ani{height:0;text-shadow: 0 0 10px black}
+#ani h1{
+	font-size:60px;
+	color:white;
+	text-align:center;
+	position: relative;
+	top:200px;
+	animation: top 2s;
+	transition: width 0.2s linear 0.5s
+}
+@keyframes top{
+	0%{top:180px; opacity: 0}
+	100%{top:200px; opacity: 1}
+}
+
+.con{height:0;}
+.con button{position: relative;width:70px;height:90px;opacity: 0.5;top:200px;font-size:20px;}
+.con:nth-child(2){height:0;width:70px;float:right;}
+
+#slide{width:100%;height:500px;overflow: hidden}
+#slide ul{display: flex;animation: slide 10s infinite;width:calc(100% * 3);}
+#slide li{width:calc(100% / 3);height:500px;background-position: center;background-repeat: no-repeat;background-size: cover}
+#slide li:nth-child(1){background-image:url('../resources/img/bedroom-1006526_1920.jpg');background-position: 0 70%}
+#slide li:nth-child(2){background-image:url('../resources/img/house-2593489_1920.jpg')}
+#slide li:nth-child(3){background-image:url('../resources/img/living-room-2155376_1920.jpg')}
+
+@keyframes slide{
+	0%{margin-left:0;}
+	20%{margin-left:0;}
+	25%{margin-left:-100%;}
+	45%{margin-left:-100%;}
+	50%{margin-left:-200%;}
+	70%{margin-left:-200%;}
+	75%{margin-left:-100%;}
+	95%{margin-left:-100%;}
+	100%{margin-left:0%;}
+}
+
+#em8{height:8em;}
+.space{height:10em;padding:40px;}
+.space h1{text-align: center;font-size:50px;color:#1c1c1c;}
+
+.st .post{width:330px;height:380px;text-align: center;margin-right:26px;}
+.st .post:nth-child(4){margin-right:0;}
+.st .post p{color:orange;}
+.st .img{position: relative;overflow: hidden}
+.st .post img{width:330px;height:330px;}
+.st .hidden{position: absolute;transition: all .25s;left:330px;}
+.st .img:hover .hidden{left:0;}
+
+.read-more{height:7em;text-align:right;}
+.read-more button{width:150px;height:40px;font-size:20px;margin-top:2em;}
+.read-more button:hover{background:#1c1c1c;color:white;}
+
+.nd h1{color:white;border-top:1px solid white;}
+.nd .post{width:270px;height:337px;position: relative;overflow: hidden}
+.nd .post img{width:270px;position: absolute;transition: all .25s}
+.nd .post .hidden{
+	width:270px;height:337px;
+	background:darkblue;
+	transform: rotateY(-180deg);
+	opacity: 0;
+	transition: all .25s;
+	padding:10px;
+}
+.nd .post:hover img{transform: rotateY(180deg);}
+.nd .post:hover .hidden{transform: rotateY(0deg);opacity: 1}
+.nd .hidden>div{width:250px;height:317px;border:1px solid white;color:white;text-align: center}
+.nd h2{margin-top:30px;}
+.nd button{background:none;margin-top:30px;border:1px solid pink;color:white;padding:5px;}
+.nd .read-more button{border:1px solid white;}
+.nd .read-more button:hover{border:1px solid white;background:white;color:#1c1c1c;}
+
+.rd h1{color:darkblue;}
+.rd .post{width:300px;height:450px;border:1px solid #e6e6e6;box-shadow: 5px 5px 10px #e6e6e6}
+.rd li{
+	height:50px;
+	border-bottom:1px dashed #e6e6e6;
+	padding:15px;padding-left:5px;
+	font-weight: bold;
+	color:#424242;
+}
+
+#ham{width:30px;height:30px;float:right;position: fixed;border:1px solid black;opacity: 0;}
+#ham ul{display: block;}
+#ham li{height:5px;}
+
+footer{background:silver;text-align: center;height:50px;line-height:50px;}
+
+@media (max-width:480px){
+	header img{height:30px;}
+	#em8{height:3em;}
+	#slide{height:300px;}
+	#slide li{height:300px;}
+
+	.con:nth-child(2){height:0;width:50px;float:right;}
+	.con button{top:140px;width:50px;height:60px;}
+	
+	#ani{width:80%}
+	#ani h1{font-size:40px;left:50px;top:150px;}
+	@keyframes top{
+		0%{top:140px; opacity: 0}
+		100%{top:150px; opacity: 1}
+	}
+	.space h1{font-size:30px;}
+
+	.st .post{width:210px;height:260px;margin:0 7px 15px 7px;}
+	.st .post img{width:210px;height:210px;}
+	.st .hidden{left:210px;}
+	
+	.read-more button{width:100px;height:30px;}
+
+	.nd article{justify-content: flex-start;flex-wrap:wrap;}
+
+	.nd h1{color:white;border-top:1px solid white;}
+	.nd .post{width:170px;height:210px;margin:0 25px 25px 25px;}
+	.nd .post img{width:170px;position: absolute;transition: all .25s}
+	.nd .post .hidden{width:170px;height:237px}
+	.nd .hidden>div{width:150px;height:187px;}
+	
+	.rd .post{width:150px;height:300px;box-shadow:5px 4px 5px #e6e6e6;}
+	.rd li{
+		height:30px;
+		padding:10px;
+		font-size:10px;
+	}
+
+	header{position: fixed;background:white;z-index: 1;height:40px;}
+	header nav{display: none;}
+	nav > ul{display: block;justify-content: flex-start;text-align:center;background:white;}
+	nav li{border-bottom:1px solid silver;text-align:center;}
+	#ham{opacity: 1;}
+	#ham:hover ~ nav{display: block;}
+	nav:hover{display: block}
+}
+
+
+/*B모듈*/
+.shop_wrap{max-width:1550px;margin: auto;}
+.shop_wrap>div{width:100%;display: flex;flex-wrap: wrap;}
+.shop_wrap>div .item_list{width:75%;}
+.shop_wrap>div .cc{width:25%;padding:10px;}
+.shop_wrap button{border:1px solid black;}
+.shop_wrap input{width:100%;}
+
+.item_list img{width:250px;}
+.item_list div{margin:10px;}
+
+#drop{width:100%;height:200px;
+	background:repeating-linear-gradient(-45deg,#2E2E2E,#2e2e2e,20px,#424242 0,#424242 40px);
+	color:white;
+	text-align:center;
+	margin-top:10px;
+}
+#drop h3{line-height:200px;}
+#drop.hit{background:repeating-linear-gradient(-45deg,#c6f,#c6f,20px,#96f 0,#96f 40px);}
+
+.cc{border-left:1px solid silver;}
+
+.cart >div{display: flex;border:1px solid black;margin-top:10px;}
+.cart input{width:50%;}
+.cart img{width:170px;}
+
+
+
+/*C모듈*/
